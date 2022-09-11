@@ -1,4 +1,4 @@
-module github.com/golang-queue/redisdb-stream
+module github.com/shubhshekhar09/redisdb-stream
 
 go 1.18
 
