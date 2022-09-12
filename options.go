@@ -21,7 +21,7 @@ type options struct {
 	cluster          bool
 	group            string
 	consumer         string
-	maxleng          int
+//	maxleng          int64
 }
 
 // WithAddr setup the addr of redis
@@ -66,11 +66,11 @@ func WithConsumer(name string) Option {
 	}
 }
 
-func WithMaxleng(maxleng int) Option {
-	return func(w *options) {
-		w.maxleng = maxleng
-	}
-}
+//func WithMaxleng(maxleng int64) Option {
+//	return func(w *options) {
+//		w.maxleng = maxleng
+//	}
+//}
 
 // WithPassword redis password
 func WithPassword(passwd string) Option {

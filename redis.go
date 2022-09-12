@@ -208,8 +208,8 @@ func (w *Worker) queue(data interface{}) error {
 	// Publish a message.
 	err := w.rdb.XAdd(ctx, &redis.XAddArgs{
 		Stream:       w.opts.streamName,
-		MaxLen:       w.opts.maxleng,
-		MaxLenApprox: 0,
+		MaxLen:       1000,
+		MaxLenApprox: 1000,
 		Values:       data,
 	}).Err()
 
