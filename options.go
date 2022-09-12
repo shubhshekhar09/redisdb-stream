@@ -66,7 +66,7 @@ func WithConsumer(name string) Option {
 	}
 }
 
-func WithMaxleng(maxlength int) Option {
+func WithMaxlength(maxlength int) Option {
 	return func(w *options) {
 		w.maxlength = maxlength
 	}
