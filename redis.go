@@ -106,6 +106,7 @@ func (w *Worker) fetchTask() {
 		}).Result()
 		w.opts.logger.Info("read message")
 		if err != nil {
+			w.opts.logger.Infof("found error in reading %v",err)
 			return
 		}
 		// we have received the data we should loop it and queue the messages
