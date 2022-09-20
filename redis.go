@@ -88,6 +88,7 @@ func (w *Worker) fetchTask() {
 	for {
 		select {
 		case <-w.stop:
+			w.opts.logger.Info("exited from infinite loop")
 			return
 		default:
 		}
