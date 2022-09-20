@@ -101,7 +101,7 @@ func (w *Worker) fetchTask() {
 			Count: 1,
 			// we use the block command to make sure if no entry is found we wait
 			// until an entry is found
-			Block: 0,
+			Block: 1000,
 		}).Result()
 		if err != nil {
 			return
