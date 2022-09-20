@@ -104,6 +104,7 @@ func (w *Worker) fetchTask() {
 			// until an entry is found
 			Block: 50000,
 		}).Result()
+		w.opts.logger.Info("read message")
 		if err != nil {
 			return
 		}
